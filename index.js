@@ -3,10 +3,11 @@ const express = require('express');
 const app = express();
 const PORT = 3001;
 
+//routes imports
+const userRoutes = require('./routes/userRoutes');
 
-app.get('/',(req,res)=>{
-    res.send('hello world');
-})
+
+app.use(userRoutes);
 
 
 
